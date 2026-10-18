@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Т-ЭнергоСистемы | Электромонтаж в Краснодаре</title>
+    <style>
+        /* Базовые стили */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #1a1a2e; background-color: #f8f9fa; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { color: #0d47a1; margin-bottom: 15px; }
+        p { margin-bottom: 15px; }
+        a { text-decoration: none; color: #1976d2; }
+
+        /* Шапка */
+        header { background: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 800; color: #0d47a1; display: flex; align-items: center; gap: 10px; }
+        .logo-icon { font-size: 30px; }
+        .header-phone { font-size: 20px; font-weight: 700; }
+        .header-phone a { color: #1a1a2e; }
+
+        /* Главный экран */
+        .hero { padding: 60px 0; background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%); color: #fff; }
+        .hero h1 { color: #fff; font-size: 36px; margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+        .btn { display: inline-block; padding: 15px 30px; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: 0.3s; text-align: center; border: none; }
+        .btn-primary { background: #ffc107; color: #1a1a2e; box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); }
+        .btn-primary:hover { background: #ffca28; transform: translateY(-2px); }
+        .btn-outline { border: 2px solid #fff; color: #fff; margin-left: 15px; background: transparent; }
+        .btn-outline:hover { background: #fff; color: #0d47a1; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 15px; }
+
+        /* Преимущества */
+        .features { padding: 60px 0; background: #fff; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { text-align: center; padding: 30px; border-radius: 10px; background: #f8f9fa; border: 1px solid #e0e0e0; }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; }
+
+        /* Услуги */
+        .services { padding: 60px 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .service-card { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid #1976d2; }
+        .service-card h3 { font-size: 18px; margin-bottom: 10px; }
+
+        /* Галерея */
+        .gallery { padding: 60px 0; background: #fff; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .gallery-img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: 0.3s; background-color: #e0e0e0;}
+        .gallery-img:hover { transform: scale(1.02); }
+
+        /* Контакты */
+        .contact { padding: 60px 0; background: #e3f2fd; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-list { list-style: none; margin-bottom: 30px; }
+        .contact-list li { margin-bottom: 15px; font-size: 16px; display: flex; align-items: center; gap: 10px; }
+        .form-box { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .form-box input, .form-box textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; }
+        .form-box textarea { height: 100px; resize: vertical; }
+        .form-box .btn { width: 100%; }
+        .form-note { font-size: 12px; color: #666; text-align: center; margin-top: 10px; }
+
+        /* Подвал */
+        footer { background: #1a1a2e; color: #fff; padding: 30px 0; text-align: center; }
+        footer p { margin: 0; opacity: 0.7; font-size: 14px; }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .btn-outline { margin-left: 0; margin-top: 10px; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+            .header-phone { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><span class="logo-icon">⚡</span> Т-ЭнергоСистемы</div>
+            <div class="header-phone"><a href="tel:+79673159050">+7 (967) 315-90-50</a></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Электромонтаж квартир, домов и офисов в Краснодаре</h1>
+            <p>Работаю по официальному договору. Фиксированная смета. Гарантия 2 года. Электромонтажник 6-го разряда.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/79673159050" class="btn btn-primary" target="_blank">Написать в WhatsApp</a>
+                <a href="#contact" class="btn btn-outline">Заказать замер</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Почему меня выбирают</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Официальный договор</h3>
+                    <p>Работаю по договору подряда. Вы защищены юридически. Полный пакет документов для юрлиц.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Гарантия 2 года</h3>
+                    <p>На все выполненные работы даю гарантию 24 месяца. Устраняю любые дефекты за свой счет.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Фиксированная смета</h3>
+                    <p>Цена, прописанная в смете, не меняется в процессе работ. Никаких внезапных «доплат».</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Что я делаю</h2>
+            <div class="services-grid">
+                <div class="service-card"><h3>Электромонтаж под ключ</h3><p>Квартиры, дома, новостройки, вторичное жилье. От штробления до установки розеток.</p></div>
+                <div class="service-card"><h3>Коммерческие объекты</h3><p>Офисы, магазины, кафе, салоны. Работа с юрлицами, безналичный расчет, документы.</p></div>
+                <div class="service-card"><h3>Щиты и автоматика</h3><p>Сборка и монтаж электрощитов (ВРУ, ГРЩ, этажные). Монтаж умного дома.</p></div>
+                <div class="service-card"><h3>Теплые полы</h3><p>Монтаж электрических теплых полов (маты, кабель). Укладка по всем стандартам.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Мои работы</h2>
+            <div class="gallery-grid">
+                <!-- ВАЖНО: Сюда нужно вставить ссылки на ваши фото, как это сделать - читайте ниже -->
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Сборка щита" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?q=80&w=600&auto=format&fit=crop" alt="Прокладка кабеля" class="gallery-img">
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?q=80&w=600&auto=format&fit=crop" alt="Теплый пол" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2>Свяжитесь со мной</h2>
+                <p>Оставьте заявку, и я бесплатно проконсультирую вас по вашему объекту. Выезд на замер — бесплатно.</p>
+                <ul class="contact-list">
+                    <li>📞 <a href="tel:+79673159050">+7 (967) 315-90-50</a></li>
+                    <li>💬 <a href="https://wa.me/79673159050" target="_blank">WhatsApp</a></li>
+                    <li>✈️ <a href="https://t.me/igor_ittech" target="_blank">Telegram: @igor_ittech</a></li>
+                    <li>✉️ <a href="mailto:t-energo.sistema@mail.ru">t-energo.sistema@mail.ru</a></li>
+                    <li>📍 г. Краснодар и Краснодарский край</li>
+                </ul>
+            </div>
+            <div class="form-box">
+                <h3 style="margin-bottom: 20px;">Заказать звонок</h3>
+                <!-- Форма отправляет письма на вашу почту через сервис Formspree -->
+                <form action="https://formspree.io/f/xrbkqjqn" method="POST">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <textarea name="message" placeholder="Опишите задачу (например: квартира 60 кв.м, нужна полная замена проводки)"></textarea>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Т-ЭнергоСистемы (ИП Тищенко). Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
